@@ -5,11 +5,21 @@ DerivedData/
 *.xcworkspace/xcuserdata/
 *.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/
 xcuserdata/
+*.ipa
+*.dSYM.zip
+*.dSYM/
+*.xcarchive
+*.moved-aside
+*.hmap
 
 # macOS
 .DS_Store
 .AppleDouble
 .LSOverride
+
+# Editor
+*.swp
+*~
 
 # OpenCode
 .opencode/
