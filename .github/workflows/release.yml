@@ -38,6 +38,10 @@ jobs:
         run: |
           VERSION="${GITHUB_REF_NAME#v}"
           mkdir -p release
+          codesign --force --deep --sign - \
+            "build/Build/Products/Release/hiddenapp.app"
+          codesign --verify --deep --strict --verbose=2 \
+            "build/Build/Products/Release/hiddenapp.app"
           ditto -c -k --sequesterRsrc --keepParent \
             "build/Build/Products/Release/hiddenapp.app" \
             "release/HiddenApp-${VERSION}.zip"
